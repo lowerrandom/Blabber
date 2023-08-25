@@ -40,7 +40,7 @@ toggle_device(dev_id, True)
 # Manufacturer Specifc data for Apple TV
 #    ---> Length: 0x16
 #    ---> Type: 0xff                                  (Manufacturer Specific)
-#    ---> Company ID: 0x004c                          (Apple, Inc.)
+#    ---> Company ID: 0x00 0x4c                          (Apple, Inc.)
 
 # Apple Continuity Protocol
 #    ---> Unknown: 0x04
