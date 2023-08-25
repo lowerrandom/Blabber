@@ -50,7 +50,7 @@ toggle_device(dev_id, True)
 #            Tag: 0x0f                                (Nearby Action)
 #            Length: 0x07
 #            Action Flags: 0xc0
-#            Action Type: 0xc1                        (Apple TV Setup)
+#            Action Type: 0x01                        (Apple TV Setup)
 #            Auth Tag: 0x60 0x4c 0x95
 #            Device: 0x0c                             (AppleTV)
 #    ---> Nearby Info
