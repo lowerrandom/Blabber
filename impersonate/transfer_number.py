@@ -47,12 +47,11 @@ except:
     raise
 
 print("Start advertising...")
-while True:
-   try:
-        start_le_advertising(sock, adv_type=0x03, min_interval=args.interval, max_interval=args.interval,
+try:
+    start_le_advertising(sock, adv_type=0x03, min_interval=args.interval, max_interval=args.interval,
                              data=(data1 + left_speaker + right_speaker + case + data2))
-        while True:
-            sleep(2)
-    except:
-        stop_le_advertising(sock)
-        raise
+    while True:
+        sleep(2)
+except:
+    stop_le_advertising(sock)
+    raise
