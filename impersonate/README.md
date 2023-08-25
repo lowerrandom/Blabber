@@ -5,3 +5,10 @@ This folder provides a set of scripts that can be used to imperonate different d
 # Setup
 
 Please follow the setup guide provided here: https://github.com/hexway/apple_bleee
+
+# Next Steps
+
+Simply run the desired script and watch the advertisement pop-up on your device!
+
+Sample notification from setup_appletv.py:
+![Alt text](images/setup_appletv.jpg)
