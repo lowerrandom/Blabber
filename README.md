@@ -7,7 +7,6 @@ You know that "friend" that just won't stop talking!? That's true for a lot of o
 # Connect with MSC
 https://www.youtube.com/@marketstreetcyber
 
-
 # Resources and References:
 Jae Bochs "It was me" tweet - DEFCON 2023 AppleTV Advertisement
 
@@ -40,3 +39,6 @@ https://github.com/netspooky/dissectors/blob/main/bgblink.lua
 Apple Continuity Protocol Research
 
 https://github.com/furiousMAC/continuity
+
+# Disclaimer
+Don't be a bad guy. Use this tool responsibly and for educational purposes only. We are not liable for any harm caused by the use of these tools.
